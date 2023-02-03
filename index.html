@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn Karate</title>
+
+    <style>
+      body {
+        background:linear-gradient(99.6deg, rgb(112, 128, 152) 10.6%, rgb(242, 227, 234) 32.9%, rgb(234, 202, 213) 52.7%, rgb(220, 227, 239) 72.8%, rgb(185, 205, 227) 81.1%, rgb(154, 180, 212) 102.4%);
+      }
+
+      h1 {
+        text-align: center;
+      }
+
+      h2 {
+        text-align: center;
+      }
+
+      img {
+        max-width: 100%;
+      }
+
+       p {
+        font-size: 18px;
+        line-height: 1.5;
+        color:whitesmoke
+      }
+
+      button {
+        display: block;
+        margin: 0 auto;
+        border: 1px solid plum;
+        background: white;
+        font-size: 20px;
+        border-radius: 6px;
+        padding: 10px 15px;
+        transition: all 150ms ease-in-out;
+      }
+
+      button:hover {
+        background: plum;
+        cursor: pointer;
+      }
+      .container {
+        max-width: 600px;
+        margin: 20px auto;
+        background: rgb(105, 94, 94);
+        padding: 20px;
+        border-radius: 10px;
+      }
+
+      footer {
+        text-align: center;
+        margin: 10px 0;
+        font-size: 18px;
+      }
+
+      .theme-button {
+        font-size: 10px;
+        background: black;
+        color: white;
+        padding: 5 8px;
+      }
+
+      .theme-button:hover {
+        color: black;
+        background: white;
+      }
+
+      .karate-intro-picture {
+        border-radius: 10px;
+        transition: all 150ms ease-in-out;
+        display: block;
+        margin: 0 auto
+      }
+
+      .karate-intro-picture:hover {
+        filter: contrast(80%);
+        transform: scale(1.1);
+      }
+
+      .grid {
+        margin: 15px 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-gap: 20px;
+      }
+
+      .grid img {
+        width: 100%;
+        border-radius: 8px;
+        transition: all 150ms ease-in-out;
+        max-height: 90px;
+        object-fit: cover;
+        object-position: top;
+      }
+
+      .grid img:hover {
+        transform: scale(2);
+      }
+
+      .dark {
+        background: linear-gradient(
+          112.1deg,
+          rgb(32, 38, 57) 11.4%,
+          rgb(63, 76, 119) 70.2%
+        );
+        color: white;
+      }
+
+      .dark .container {
+        background: rgba(255, 255, 255, 0.1);
+      }
+
+      .dark a {
+        color: rgb(121, 124, 124);
+      }
+    </style>
+</head>
+<body>
+     <button class="theme-button">Dark theme</button>
+    <div class="container">
+    <h1>
+        Karate 🥋
+    </h1>
+    <h2>
+        My Favorite Hobby 
+    </h2>
+    <a href="https://en.wikipedia.org/wiki/Karate" target="_blank">
+        <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/060/317/original/woman_punch.jpg?1672022946"
+        alt=""
+          class="karate-intro-picture"
+        />  
+    </a>
+
+    <div class="grid">
+    <img
+       src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/060/316/original/karate_stance.jpg?1672022925"
+    alt=""
+       /> 
+
+    <img
+       src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/060/315/original/woman-poses-focused-mindset-400x267.jpg?1672021608"
+       alt=""
+       /> 
+
+    <img
+       src=https://s3.amazonaws.com/shecodesio-production/uploads/files/000/060/314/original/woman_kick.jpg?1672021594
+       alt=""
+    /> 
+
+    <img
+       src=" https://s3.amazonaws.com/shecodesio-production/uploads/files/000/060/313/original/AA_karate.jpg?1672021519"
+       alt=""
+    />
+    </div>
+    <p>
+        Karate (空手) (/kəˈrɑːti/;  Okinawan pronunciation: [kaɽati]) is a martial art developed in the Ryukyu Kingdom. It developed from the indigenous Ryukyuan martial arts (called te (手), "hand"; tii in Okinawan) under the influence of Chinese martial arts, particularly Fujian White Crane.[1][2] Karate is now predominantly a striking art using punching, kicking, knee strikes, elbow strikes and open-hand techniques such as knife-hands, spear-hands and palm-heel strikes. Historically, and in some modern styles, grappling, throws, joint locks, restraints and vital-point strikes are also taught.[3] A karate practitioner is called a karateka (空手家).
+        <br /><br />
+
+        <a href="https://en.wikipedia.org/wiki/Karate"
+        <strong> Read on Wikipedia </strong>
+        </a>
+    </p>
+
+    <button class="karate-button">Learn Karate</button>
+    
+    <footer>Coded By Tiffany Clark</footer>
+
+    <script>
+      function changeTheme() {
+        let body = document.querySelector("body");
+
+        // body.classList.toggle("dark");
+
+        if (body.classList.contains("dark")) {
+          body.classList.remove("dark");
+        } else {
+          body.classList.add("dark");
+        }
+      }
+
+      let themeButton = document.querySelector(".theme-button");
+      themeButton.addEventListener("click", changeTheme);
+
+      function handleKarateButton()
+      {
+        window.location.href = "https://thousandwaves.org/"
+      }
+
+      let karateButton = document.querySelector(".karate-button");
+      karateButton.addEventListener("click", handleKarateButton);
+    </script>
+</body>
+</html>
